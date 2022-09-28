@@ -103,7 +103,7 @@ export function Home () {
                     className='info-cont-right'
                     onClick={()=>window.location.assign('/eden-supermarket')}
                     >
-                        <img src='images/products page imac.svg' loading='lazy' className='second-section-img' alt='project' />
+                        <img src='images/products page imac.svg' className='second-section-img' alt='project' />
                         <div className='second-section-text'>
                             <div>
                                 <h4>A FULL-STACK E-COMMERCE APP WITH TWO ROLES</h4>

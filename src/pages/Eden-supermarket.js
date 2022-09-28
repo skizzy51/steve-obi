@@ -13,7 +13,7 @@ export function EdenSupermarket () {
         <div className='project-page'>
             <div className='page-info'>
                 <h1>EDEN SUPERMARKET</h1>
-                <img loading='lazy' className='landing-pic' src='images/shopping app multiple devices.svg' alt='project pic' />
+                <img className='landing-pic' src='images/shopping app multiple devices.svg' alt='project pic' />
                 <h2>Tools used in building this app include</h2>
                 <div className='project-tools'><span>React js</span><span>SCSS</span><span>Javascript</span><span>Bootstrap</span></div>
                 <p className='read-me'>
