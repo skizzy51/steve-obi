@@ -4,13 +4,8 @@ import { Navbar } from '../components/Navbar'
 import { motion } from 'framer-motion'
 import '../styles/css/Project-page.css'
 import { faCode, faFolderOpen, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
-import { useInView } from 'react-intersection-observer'
 
 export function SteveBetting () {
-    const { ref : first, inView : firstIsVisible } = useInView({threshold:.7})
-    const { ref : second, inView : secondIsVisible } = useInView({threshold:.7})
-    const { ref : third, inView : thirdIsVisible } = useInView({threshold:.7})
-    const { ref : fourth, inView : fourthIsVisible } = useInView({threshold:.7})
     return (
         <>
         <Navbar/>
@@ -27,7 +22,7 @@ export function SteveBetting () {
                     Math.random() function in Javascript.
                 </p>
                 <div className='project-content'>
-                    <motion.div initial={{opacity:0,x:'-100%'}} animate={firstIsVisible&&{opacity:1,x:0}} ref={first}  className='details-right'>
+                    <div className='details-right'>
                         <img src='images/macbook horse bet type.svg' alt='project-pic' />
                         <div className='content'>
                             <div>
@@ -38,8 +33,8 @@ export function SteveBetting () {
                                 </p>
                             </div>
                         </div>
-                    </motion.div>
-                    <motion.div initial={{opacity:0,x:'100%'}} animate={secondIsVisible&&{opacity:1,x:0}} ref={second}  className='details-left'>
+                    </div>
+                    <div className='details-left'>
                         <img src='images/macbook horse race sim.svg' alt='project-pic' />
                         <div className='content'>
                             <div>
@@ -50,8 +45,8 @@ export function SteveBetting () {
                                 </p>
                             </div>
                         </div>
-                    </motion.div>
-                    <motion.div initial={{opacity:0,x:'-100%'}} animate={thirdIsVisible&&{opacity:1,x:0}} ref={third}  className='details-right'>
+                    </div>
+                    <div className='details-right'>
                         <img src='images/macbook team bet select.svg' alt='project-pic' />
                         <div className='content'>
                             <div>
@@ -59,8 +54,8 @@ export function SteveBetting () {
                                 <p>Given a list of teams, the matchups, odds, and the winners of the matches have been randomly selected using the Math.random() function in Javascript./</p>
                             </div>
                         </div>
-                    </motion.div>
-                    <motion.div initial={{opacity:0,x:'100%'}} animate={fourthIsVisible&&{opacity:1,x:0}} ref={fourth}  className='details-left'>
+                    </div>
+                    <div className='details-left'>
                         <img src='images/macbook betting paystack.svg' alt='project-pic' />
                         <div className='content'>
                             <div>
@@ -68,7 +63,7 @@ export function SteveBetting () {
                                 <p>With the use of the use of the paystack api, the user is able to deposit cash into their bet account. Fake cash of course. Lol</p>
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
                 <motion.div onClick={()=>window.location.assign('https://steve-betting.herokuapp.com/')} whileHover={{scale:1.1}} className='visit-page'>Visit page</motion.div>
             </div>

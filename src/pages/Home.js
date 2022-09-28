@@ -1,7 +1,7 @@
 import { faBootstrap, faCss3Alt, faFacebookF, faGitAlt, faGithub, faHtml5, faJs, faLinkedinIn, faNodeJs, faPython, faReact, faSass, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Navbar } from '../components/Navbar'
 import { useInView } from 'react-intersection-observer'
 import '../styles/css/Home.css'
@@ -16,21 +16,17 @@ export function Home () {
     const { ref : fourthProject, inView : fourthProjectVisible } = useInView({threshold : .3})
     const { ref : aboutContent, inView : aboutContentVisible } = useInView({threshold : .4})
 
-    useEffect(()=>{
-        setTimeout(()=>{
-            setIntroHide(false)
-        }, 5000)
-    },[])
 
     return (
         <div style={!introHide ? {height:'auto'} : {height:'100vh',overflowY:'hidden'}}>
             <div className="intro" id="#intro">
                 <motion.img
                 initial={window.innerWidth > 768 ? {height:'100vh',x:0} : {height:'80vh',x:0}}
-                animate={window.innerWidth > 768 ? {height:'80vh', x:'15vw'} : {height:'50vh', x:'35vw'}}
-                transition={{delay:5, duration:2.5}}
+                animate={!introHide && window.innerWidth > 768 ? {height:'80vh', x:'15vw'} : {height:'50vh', x:'35vw'}}
+                transition={{duration:2.5}}
                 src='images/standing pic.svg'
                 className='intro-pic'
+                onLoad={()=>setIntroHide(false)}
                 alt='pic of steve'
                 />
 
@@ -107,7 +103,7 @@ export function Home () {
                     className='info-cont-right'
                     onClick={()=>window.location.assign('/eden-supermarket')}
                     >
-                        <img src='images/products page imac.svg' className='second-section-img' alt='project' />
+                        <img src='images/products page imac.svg' loading='lazy' className='second-section-img' alt='project' />
                         <div className='second-section-text'>
                             <div>
                                 <h4>A FULL-STACK E-COMMERCE APP WITH TWO ROLES</h4>

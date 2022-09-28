@@ -4,14 +4,8 @@ import { Navbar } from '../components/Navbar'
 import { motion } from 'framer-motion'
 import '../styles/css/Project-page.css'
 import { faCode, faFolderOpen, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
-import { useInView } from 'react-intersection-observer'
 
 export function EdenSupermarket () {
-    const { ref : first, inView : firstIsVisible } = useInView({threshold:.7})
-    const { ref : second, inView : secondIsVisible } = useInView({threshold:.7})
-    const { ref : third, inView : thirdIsVisible } = useInView({threshold:.7})
-    const { ref : fourth, inView : fourthIsVisible } = useInView({threshold:.7})
-    const { ref : fifth, inView : fifthIsVisible } = useInView({threshold:.3})
     return (
         <>
         <Navbar/>
@@ -28,7 +22,7 @@ export function EdenSupermarket () {
                     There are some functions specific for just the admin and some for just the user. Let us go through some of these functionalities.
                 </p>
                 <div className='project-content'>
-                    <motion.div initial={{opacity:0,x:'-100%'}} animate={firstIsVisible&&{opacity:1,x:0}} ref={first} className='details-right'>
+                    <div className='details-right'>
                         <img src='images/macbook admin inventory.svg' alt='project-pic' />
                         <div className='content'>
                             <div>
@@ -36,8 +30,8 @@ export function EdenSupermarket () {
                                 <p>The admin can delete products from the inventory and also update the quantity of products in the inventory.</p>
                             </div>
                         </div>
-                    </motion.div>
-                    <motion.div initial={{opacity:0,x:'100%'}} animate={secondIsVisible&&{opacity:1,x:0}} ref={second} className='details-left'>
+                    </div>
+                    <div className='details-left'>
                         <img src='images/macbook admin create product.svg' alt='project-pic' />
                         <div className='content'>
                             <div>
@@ -45,8 +39,8 @@ export function EdenSupermarket () {
                                 <p>This is where the store products are created. The admin enters the product name, price, tags, description and also the images of the product.</p>
                             </div>
                         </div>
-                    </motion.div>
-                    <motion.div initial={{opacity:0,x:'-100%'}} animate={thirdIsVisible&&{opacity:1,x:0}} ref={third} className='details-right'>
+                    </div>
+                    <div className='details-right'>
                         <img src='images/macbook admin add product.svg' alt='project-pic' />
                         <div className='content'>
                             <div>
@@ -54,8 +48,8 @@ export function EdenSupermarket () {
                                 <p>Four layouts curated for the admin to be able to display products on th home page.</p>
                             </div>
                         </div>
-                    </motion.div>
-                    <motion.div initial={{opacity:0,x:'100%'}} animate={fourthIsVisible&&{opacity:1,x:0}} ref={fourth} className='details-left'>
+                    </div>
+                    <div className='details-left'>
                         <img src='images/macbook change password shopping.svg' alt='project-pic' />
                         <div className='content'>
                             <div>
@@ -63,8 +57,8 @@ export function EdenSupermarket () {
                                 <p>The user is able to change their username, change their password and also delete their account if they see fit.</p>
                             </div>
                         </div>
-                    </motion.div>
-                    <motion.div initial={{opacity:0,x:'-100%'}} animate={fifthIsVisible&&{opacity:1,x:0}} ref={fifth} className='details-right'>
+                    </div>
+                    <div className='details-right'>
                         <img src='images/macbook paystack shopping.svg' alt='project-pic' />
                         <div className='content'>
                             <div>
@@ -72,7 +66,7 @@ export function EdenSupermarket () {
                                 <p>The user is able to add items to cart and also checkout those items using a paystack test payment page.</p>
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
                 <motion.div onClick={()=>window.location.assign('https://eden-shopping-app.herokuapp.com/')} whileHover={{scale:1.1}} className='visit-page'>Visit page</motion.div>
             </div>
