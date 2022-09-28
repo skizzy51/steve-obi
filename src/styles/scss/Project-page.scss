@@ -1,0 +1,240 @@
+@import './mixins';
+@import './variables';
+
+
+.project-page{
+    position: relative;
+    overflow-x: hidden;
+    @include alignCenterWithoutJustifyContent;
+    flex-direction: column;
+    
+    .page-info{
+        width: 80vw;
+        margin-top: 17vh;
+        color: #000D60;
+        @include alignCenterWithoutJustifyContent;
+        flex-direction: column;
+        z-index: 2;
+
+        & h1{
+            text-align: center;
+            font-size: clamp(1.4rem, 2.5vw, 2.5rem);
+        }
+        .landing-pic{
+            width: clamp(18rem, 40vw, 40rem);
+            margin-top: 5vh;
+        }
+        & h2{
+            margin-top: 10vh;
+            font-size: clamp(1rem, 2vw, 2rem);
+        }
+        .project-tools{
+            @include justify-content(space-between);
+            width: 70%;
+            margin: 5vh 0;
+            flex-wrap: wrap;
+            & span{
+                text-decoration: underline;
+                margin: 1rem 0;
+                font-size: clamp(.9rem, 1.5vw, 1.5rem);
+            }
+        }
+        .read-me{
+            text-align: center;
+            font-size: clamp(.9rem, 1vw, 1rem);
+            width: 95%;
+        }
+        .view-backend{
+            margin: 10vh 0;
+            width: 60%;
+            @include justify-content(space-between);
+            flex-wrap: wrap;
+            & div{
+                cursor: pointer;
+                border: 2px $blueColor solid;
+                padding: .8rem 0;
+                width: clamp(10rem, 30%, 14rem);
+                font-weight: 700;
+                text-align: center;
+                transition: $allTransition;
+                &:hover{
+                    background-color: $blueColor;
+                    color: white;
+                }
+            }
+        }
+        .project-content{
+            width: 100%;
+            @include alignCenterWithoutJustifyContent;
+            flex-direction: column;
+            overflow: hidden;
+
+            .details-right{
+                position: relative;
+                margin-left: auto;
+                margin-top: 10vh;
+                margin-bottom: 5vh;
+                display: flex;
+                overflow: visible;
+
+                & img{
+                    position: relative;
+                    z-index: 2;
+                    width: clamp(10rem, 27vw, 26rem);
+                }
+                .content{
+                    position: absolute;
+                    width: 110%;
+                    height: 120%;
+                    background-color: $blueColor;
+                    right: 85%;
+                    color: white;
+                    & div{
+                        padding: 7%;
+
+                        & h3{
+                            font-size: clamp(.8rem, 1.2vw, 1.2rem);
+                            text-align: center;
+                        }
+                        & p{
+                            font-size: clamp(.65rem, 1vw, 1rem);
+                            z-index: 5;
+                        }
+                    }
+                }
+            }
+            .details-left{
+                position: relative;
+                margin-right: auto;
+                margin-top: 5vh;
+                margin-bottom: 5vh;
+                display: flex;
+                overflow: visible;
+
+                & img{
+                    position: relative;
+                    z-index: 2;
+                    width: clamp(10rem, 27vw, 26rem);
+                }
+                .content{
+                    position: absolute;
+                    width: 110%;
+                    height: 120%;
+                    background-color: $blueColor;
+                    left: 85%;
+                    color: white;
+                    & div{
+                        padding: 7%;
+
+                        & h3{
+                            font-size: clamp(.8rem, 1.2vw, 1.2rem);
+                            text-align: center;
+                        }
+                        & p{
+                            font-size: clamp(.65rem, 1vw, 1rem);
+                            z-index: 5;
+                        }
+                    }
+                }
+            }
+        }
+        .visit-page{
+            border: 2px $blueColor solid;
+            font-size: 1.2rem;
+            margin: 20vh 0;
+            border-radius: 2rem;
+            padding: .7rem 1.5rem;
+            cursor: pointer;
+        }
+    }
+}
+
+.project-socials{
+    position: fixed;
+    left: 3vw;
+    bottom: 1rem;
+    @include flex-direction(column);
+    background-color: transparent;
+    z-index: 8;
+
+    .home-social-btn{
+        margin-bottom: .5rem;
+        font-size: 1.3rem;
+        color: $blueColor;
+        padding: 9px;
+        border-radius: 50%;
+        transition: $allTransition;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $blueColor;
+            color: white;
+        }
+    }
+}
+
+.rectangle{
+    height: 2px;
+    border-top: 2px #000D60 solid;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 65vh;
+}
+
+@media (max-width: 768px) {
+    .project-page{
+        .page-info{
+            width: 100%;
+
+            .project-tools{
+                width: 90%;
+                font-weight: 600;
+            }
+            .view-backend{
+                justify-content: center;
+                & div{
+                    width: 90%;
+                    margin: 1rem 0;
+                }
+            }
+            .project-content{
+                width: 90%;
+                margin-top: 5vh;
+                overflow-y: visible;
+                
+                .details-right{
+                    margin-bottom: 10vh;
+                    & img{
+                        width: clamp(13rem, 65vw, 16rem);
+                    }
+                    .content{
+                        right: 10%;
+                        top: 98%;
+                        width: 120%;
+                        height: 110%;
+                    }
+                }
+                .details-left{
+                    margin-top: 15vh;
+                    margin-bottom: 15vh;
+                    & img{
+                        width: clamp(13rem, 65vw, 16rem);
+                    }
+                    .content{
+                        left: 10%;
+                        top: 98%;
+                        width: 120%;
+                        height: 110%;
+                    }
+                }
+            }
+        }
+    }
+    .rectangle{
+        display: none;
+    }
+    .project-socials{
+        display: none;
+    }
+}

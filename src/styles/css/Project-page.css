@@ -1,0 +1,231 @@
+.project-page {
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.project-page .page-info {
+  width: 80vw;
+  margin-top: 17vh;
+  color: #000D60;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+.project-page .page-info h1 {
+  text-align: center;
+  font-size: clamp(1.4rem, 2.5vw, 2.5rem);
+}
+.project-page .page-info .landing-pic {
+  width: clamp(18rem, 40vw, 40rem);
+  margin-top: 5vh;
+}
+.project-page .page-info h2 {
+  margin-top: 10vh;
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+.project-page .page-info .project-tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin: 5vh 0;
+  flex-wrap: wrap;
+}
+.project-page .page-info .project-tools span {
+  text-decoration: underline;
+  margin: 1rem 0;
+  font-size: clamp(0.9rem, 1.5vw, 1.5rem);
+}
+.project-page .page-info .read-me {
+  text-align: center;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  width: 95%;
+}
+.project-page .page-info .view-backend {
+  margin: 10vh 0;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.project-page .page-info .view-backend div {
+  cursor: pointer;
+  border: 2px #03005A solid;
+  padding: 0.8rem 0;
+  width: clamp(10rem, 30%, 14rem);
+  font-weight: 700;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.project-page .page-info .view-backend div:hover {
+  background-color: #03005A;
+  color: white;
+}
+.project-page .page-info .project-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.project-page .page-info .project-content .details-right {
+  position: relative;
+  margin-left: auto;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  display: flex;
+  overflow: visible;
+}
+.project-page .page-info .project-content .details-right img {
+  position: relative;
+  z-index: 2;
+  width: clamp(10rem, 27vw, 26rem);
+}
+.project-page .page-info .project-content .details-right .content {
+  position: absolute;
+  width: 110%;
+  height: 120%;
+  background-color: #03005A;
+  right: 85%;
+  color: white;
+}
+.project-page .page-info .project-content .details-right .content div {
+  padding: 7%;
+}
+.project-page .page-info .project-content .details-right .content div h3 {
+  font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+  text-align: center;
+}
+.project-page .page-info .project-content .details-right .content div p {
+  font-size: clamp(0.65rem, 1vw, 1rem);
+  z-index: 5;
+}
+.project-page .page-info .project-content .details-left {
+  position: relative;
+  margin-right: auto;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  display: flex;
+  overflow: visible;
+}
+.project-page .page-info .project-content .details-left img {
+  position: relative;
+  z-index: 2;
+  width: clamp(10rem, 27vw, 26rem);
+}
+.project-page .page-info .project-content .details-left .content {
+  position: absolute;
+  width: 110%;
+  height: 120%;
+  background-color: #03005A;
+  left: 85%;
+  color: white;
+}
+.project-page .page-info .project-content .details-left .content div {
+  padding: 7%;
+}
+.project-page .page-info .project-content .details-left .content div h3 {
+  font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+  text-align: center;
+}
+.project-page .page-info .project-content .details-left .content div p {
+  font-size: clamp(0.65rem, 1vw, 1rem);
+  z-index: 5;
+}
+.project-page .page-info .visit-page {
+  border: 2px #03005A solid;
+  font-size: 1.2rem;
+  margin: 20vh 0;
+  border-radius: 2rem;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+}
+
+.project-socials {
+  position: fixed;
+  left: 3vw;
+  bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  z-index: 8;
+}
+.project-socials .home-social-btn {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: #03005A;
+  padding: 9px;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.project-socials .home-social-btn:hover {
+  background-color: #03005A;
+  color: white;
+}
+
+.rectangle {
+  height: 2px;
+  border-top: 2px #000D60 solid;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 65vh;
+}
+
+@media (max-width: 768px) {
+  .project-page .page-info {
+    width: 100%;
+  }
+  .project-page .page-info .project-tools {
+    width: 90%;
+    font-weight: 600;
+  }
+  .project-page .page-info .view-backend {
+    justify-content: center;
+  }
+  .project-page .page-info .view-backend div {
+    width: 90%;
+    margin: 1rem 0;
+  }
+  .project-page .page-info .project-content {
+    width: 90%;
+    margin-top: 5vh;
+    overflow-y: visible;
+  }
+  .project-page .page-info .project-content .details-right {
+    margin-bottom: 10vh;
+  }
+  .project-page .page-info .project-content .details-right img {
+    width: clamp(13rem, 65vw, 16rem);
+  }
+  .project-page .page-info .project-content .details-right .content {
+    right: 10%;
+    top: 98%;
+    width: 120%;
+    height: 110%;
+  }
+  .project-page .page-info .project-content .details-left {
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+  }
+  .project-page .page-info .project-content .details-left img {
+    width: clamp(13rem, 65vw, 16rem);
+  }
+  .project-page .page-info .project-content .details-left .content {
+    left: 10%;
+    top: 98%;
+    width: 120%;
+    height: 110%;
+  }
+  .rectangle {
+    display: none;
+  }
+  .project-socials {
+    display: none;
+  }
+}/*# sourceMappingURL=Project-page.css.map */

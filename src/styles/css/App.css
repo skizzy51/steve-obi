@@ -1,0 +1,103 @@
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15vh;
+  z-index: 10;
+}
+.navbar .navbar-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  padding: 1rem 0;
+}
+.navbar .navbar-cont .logo {
+  height: clamp(4rem, 10vh, 5rem);
+  cursor: pointer;
+}
+.navbar .navbar-cont .navbar-links {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.navbar .navbar-cont .navbar-links a {
+  flex-shrink: 0;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: clamp(0.7rem, 1vw, 1rem);
+}
+.navbar .navbar-cont .menu-btn {
+  display: none;
+  color: white;
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-cont {
+    width: 90%;
+  }
+  .navbar .navbar-cont .logo {
+    height: 3rem;
+  }
+  .navbar .navbar-cont .navbar-links {
+    display: none;
+  }
+  .navbar .navbar-cont .menu-btn {
+    display: unset;
+  }
+  .sidenav {
+    height: 100vh;
+    background-color: black;
+    width: 100vw;
+    color: white;
+    position: fixed;
+    z-index: 11;
+  }
+  .sidenav .close-nav {
+    font-size: 2.5rem;
+    margin: 1.5rem 1rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .sidenav .sidenav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sidenav .sidenav-links a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 5vh 0;
+  }
+  .sidenav .sidenav-socials {
+    width: 100%;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sidenav .sidenav-socials div {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sidenav .sidenav-socials div .socials {
+    font-size: 1.5rem;
+    border: 1px solid white;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  .sidenav .sidenav-socials div .socials:hover {
+    background-color: white;
+    color: black;
+  }
+}/*# sourceMappingURL=App.css.map */
