@@ -13,7 +13,7 @@ export function EdenSupermarket () {
         <div className='project-page'>
             <div className='page-info'>
                 <h1>EDEN SUPERMARKET</h1>
-                <img className='landing-pic' src='images/shopping app multiple devices.svg' alt='project pic' />
+                <motion.img initial={{opacity:0,y:'-100%'}} animate={{opacity:1,y:0}} transition={{duration:2}} className='landing-pic' src='images/shopping app multiple devices.png' alt='project pic' />
                 <h2>Tools used in building this app include</h2>
                 <div className='project-tools'><span>React js</span><span>SCSS</span><span>Javascript</span><span>Bootstrap</span></div>
                 <p className='read-me'>
@@ -23,7 +23,7 @@ export function EdenSupermarket () {
                 </p>
                 <div className='project-content'>
                     <div className='details-right'>
-                        <img src='images/macbook admin inventory.svg' alt='project-pic' />
+                        <img src='images/macbook admin inventory.png' alt='project-pic' />
                         <div className='content'>
                             <div>
                                 <h3>INVENTORY</h3>
@@ -32,7 +32,7 @@ export function EdenSupermarket () {
                         </div>
                     </div>
                     <div className='details-left'>
-                        <img src='images/macbook admin create product.svg' alt='project-pic' />
+                        <img src='images/macbook admin create product.png' alt='project-pic' />
                         <div className='content'>
                             <div>
                                 <h3>CREATE PRODUCT</h3>
@@ -41,7 +41,7 @@ export function EdenSupermarket () {
                         </div>
                     </div>
                     <div className='details-right'>
-                        <img src='images/macbook admin add product.svg' alt='project-pic' />
+                        <img src='images/macbook admin add product.png' alt='project-pic' />
                         <div className='content'>
                             <div>
                                 <h3>DISPLAY PRODUCTS ON HOME PAGE</h3>
@@ -50,7 +50,7 @@ export function EdenSupermarket () {
                         </div>
                     </div>
                     <div className='details-left'>
-                        <img src='images/macbook change password shopping.svg' alt='project-pic' />
+                        <img src='images/macbook change password shopping.png' alt='project-pic' />
                         <div className='content'>
                             <div>
                                 <h3>CHANGE USERNAME OR PASSWORD</h3>
@@ -59,7 +59,7 @@ export function EdenSupermarket () {
                         </div>
                     </div>
                     <div className='details-right'>
-                        <img src='images/macbook paystack shopping.svg' alt='project-pic' />
+                        <img src='images/macbook paystack shopping.png' alt='project-pic' />
                         <div className='content'>
                             <div>
                                 <h3>CHECKOUT USING PAYSTACK</h3>

@@ -16,17 +16,22 @@ export function Home () {
     const { ref : fourthProject, inView : fourthProjectVisible } = useInView({threshold : .3})
     const { ref : aboutContent, inView : aboutContentVisible } = useInView({threshold : .4})
 
+    function stopLoading() {
+        setTimeout(() => {
+            setIntroHide(false)
+        }, 3500);
+    }
 
     return (
         <div style={!introHide ? {height:'auto'} : {height:'100vh',overflowY:'hidden'}}>
             <div className="intro" id="#intro">
                 <motion.img
                 initial={window.innerWidth > 768 ? {height:'100vh',x:0} : {height:'80vh',x:0}}
-                animate={!introHide && window.innerWidth > 768 ? {height:'80vh', x:'15vw'} : {height:'50vh', x:'35vw'}}
+                animate={!introHide ? window.innerWidth > 768 ? {height:'80vh', x:'15vw'} : {height:'50vh', x:'35vw'} : {}}
                 transition={{duration:2.5}}
-                src='images/standing pic.svg'
+                src='images/standing pic.png'
                 className='intro-pic'
-                onLoad={()=>setIntroHide(false)}
+                onLoad={stopLoading}
                 alt='pic of steve'
                 />
 
@@ -103,7 +108,7 @@ export function Home () {
                     className='info-cont-right'
                     onClick={()=>window.location.assign('/eden-supermarket')}
                     >
-                        <img src='images/products page imac.svg' className='second-section-img' alt='project' />
+                        <img src='images/products page imac.jpg' className='second-section-img' alt='project' />
                         <div className='second-section-text'>
                             <div>
                                 <h4>A FULL-STACK E-COMMERCE APP WITH TWO ROLES</h4>
@@ -124,7 +129,7 @@ export function Home () {
                     className='info-cont-left'
                     onClick={()=>window.location.assign('/steve-betting')}
                     >
-                        <img src='images/horse selection ipad keyboard.svg' className='second-section-img' alt='project' />
+                        <img src='images/horse selection ipad keyboard.jpg' className='second-section-img' alt='project' />
                         <div className='second-section-text'>
                             <div>
                                 <h4>STEVE BET - A VIRTUAL BETTING WEB APP</h4>
@@ -203,7 +208,7 @@ export function Home () {
                             As a full stack developer, my skills consists of both frontend development and backend development.
                         </motion.p>
                         <motion.div initial={{opacity:0,x:'100vh'}} animate={aboutContentVisible && {opacity:1,x:0}} className='image-cont'>
-                            <motion.img whileHover={window.innerWidth > 768 && {bottom:0,right:0}} src='images/face pic.svg' alt='pic of steve'/>
+                            <motion.img whileHover={window.innerWidth > 768 && {bottom:0,right:0}} src='images/face pic.png' alt='pic of steve'/>
                         </motion.div>
                     </div>
                     <h1>MY SKILLS</h1>

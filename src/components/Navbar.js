@@ -20,11 +20,14 @@ export function Navbar () {
                 <div className='close-nav'>
                     <FontAwesomeIcon onClick={()=>setSideNavOpen(false)} icon={faTimes} />
                 </div>
-                <div className='sidenav-links'>
-                    <a onClick={()=>setSideNavOpen(false)} href='#projects'>MY WORK</a>
-                    <a onClick={()=>setSideNavOpen(false)} href='#about'>ABOUT</a>
-                    <a onClick={()=>setSideNavOpen(false)} href='#contact'>CONTACT ME</a>
-                </div>
+                {
+                    window.location.pathname === '/' &&
+                    <div className='sidenav-links'>
+                        <a onClick={()=>setSideNavOpen(false)} href='#projects'>MY WORK</a>
+                        <a onClick={()=>setSideNavOpen(false)} href='#about'>ABOUT</a>
+                        <a onClick={()=>setSideNavOpen(false)} href='#contact'>CONTACT ME</a>
+                    </div>
+                }
                 <div className='sidenav-socials'>
                     <div>
                         <FontAwesomeIcon onClick={()=>alert('No facebook account yet')} className='socials' icon={faFacebookF} />

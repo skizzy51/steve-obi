@@ -13,7 +13,7 @@ export function SteveBetting () {
         <div className='project-page'>
             <div className='page-info'>
                 <h1>STEVE BET</h1>
-                <img className='landing-pic' src='images/betting app multiple devices.svg' alt='project pic' />
+                <motion.img initial={{opacity:0,y:'-100%'}} animate={{opacity:1,y:0}} transition={{duration:2}} className='landing-pic' src='images/betting app multiple devices.png' alt='project pic' />
                 <h2>Tools used in building this app include</h2>
                 <div className='project-tools'><span>React js</span><span>SCSS</span><span>Javascript</span><span>Framer motion</span></div>
                 <p className='read-me'>
@@ -23,7 +23,7 @@ export function SteveBetting () {
                 </p>
                 <div className='project-content'>
                     <div className='details-right'>
-                        <img src='images/macbook horse bet type.svg' alt='project-pic' />
+                        <img src='images/macbook horse bet type.png' alt='project-pic' />
                         <div className='content'>
                             <div>
                                 <h3>HORSE RACING TYPES</h3>
@@ -35,7 +35,7 @@ export function SteveBetting () {
                         </div>
                     </div>
                     <div className='details-left'>
-                        <img src='images/macbook horse race sim.svg' alt='project-pic' />
+                        <img src='images/macbook horse race sim.png' alt='project-pic' />
                         <div className='content'>
                             <div>
                                 <h3>RACE SIMULATION</h3>
@@ -47,7 +47,7 @@ export function SteveBetting () {
                         </div>
                     </div>
                     <div className='details-right'>
-                        <img src='images/macbook team bet select.svg' alt='project-pic' />
+                        <img src='images/macbook team bet select.png' alt='project-pic' />
                         <div className='content'>
                             <div>
                                 <h3>FOOTBALL</h3>
@@ -56,7 +56,7 @@ export function SteveBetting () {
                         </div>
                     </div>
                     <div className='details-left'>
-                        <img src='images/macbook betting paystack.svg' alt='project-pic' />
+                        <img src='images/macbook betting paystack.png' alt='project-pic' />
                         <div className='content'>
                             <div>
                                 <h3>PAYSTACK API</h3>
