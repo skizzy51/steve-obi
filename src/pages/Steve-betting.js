@@ -65,7 +65,7 @@ export function SteveBetting () {
                         </div>
                     </div>
                 </div>
-                <motion.div onClick={()=>window.location.assign('https://steve-betting.herokuapp.com/')} whileHover={{scale:1.1}} className='visit-page'>Visit page</motion.div>
+                <motion.div onClick={()=>window.location.assign('https://react-betting-app.vercel.app/')} whileHover={{scale:1.1}} className='visit-page'>Visit page</motion.div>
             </div>
             <FontAwesomeIcon icon={faCode} style={{fontSize:'clamp(7rem, 25vw, 25rem)', position:'absolute', opacity:'15%',left:'-10%',top:'10vh'}} />
             <FontAwesomeIcon icon={faFolderOpen} style={{fontSize:'clamp(5rem, 15vw, 20rem)', position:'absolute', opacity:'15%',right:'5%',top:'13%'}} />
